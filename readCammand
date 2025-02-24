@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo "Enter a filename"
+
+read filename
+
+if [ -e "$filename" ]; then
+    cat $filename
+else
+    touch $filename | echo "I am Ravan" | cat >> $filename
+fi
+
+cat $filename
